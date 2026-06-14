@@ -233,6 +233,11 @@ section{padding:120px 40px;position:relative;z-index:2}
 .card-tag{font-family:'Fragment Mono',monospace;font-size:9px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.3);letter-spacing:1px}
 .card-arrow{position:absolute;top:28px;right:28px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.3);transition:all 0.4s cubic-bezier(0.23,1,0.32,1)}
 .project-card:hover .card-arrow{background:var(--card-accent,var(--p1));color:#000;border-color:transparent;transform:rotate(-45deg) scale(1.1)}
+.card-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;position:relative;z-index:3}
+.card-link{display:inline-flex;align-items:center;gap:8px;font-family:'Fragment Mono',monospace;font-size:10px;font-weight:500;padding:10px 18px;border-radius:99px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.65);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;transition:all 0.3s cubic-bezier(0.23,1,0.32,1);cursor:none}
+.card-link:hover{background:var(--card-accent,var(--p1));color:#000;border-color:transparent;transform:translateY(-3px) scale(1.04);box-shadow:0 10px 24px rgba(0,0,0,0.35)}
+/* WEBSITES */
+#websites{background:linear-gradient(180deg,transparent,rgba(0,229,255,0.02),transparent)}
 /* CONTACT */
 #contact{text-align:center;background:linear-gradient(180deg,transparent,rgba(255,45,120,0.03),transparent)}
 .contact-giant{font-size:clamp(48px,12vw,180px);font-weight:700;letter-spacing:-5px;line-height:0.85;margin-bottom:60px}
@@ -292,7 +297,8 @@ footer{padding:32px 40px;border-top:1px solid var(--border);display:flex;justify
     <a href="#about">About</a>
     <a href="#skills">Stack</a>
     <a href="#experience">Work</a>
-    <a href="#projects">Projects</a>
+    <a href="#projects">Apps</a>
+    <a href="#websites">Websites</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-status">
@@ -343,22 +349,26 @@ footer{padding:32px 40px;border-top:1px solid var(--border);display:flex;justify
   <div class="s-title reveal delay-1">About</div>
   <div class="about-grid">
     <div class="about-text reveal delay-2">
-      I'm a <strong>React Native Developer</strong> with <em>1.5+ years</em> of building apps that people actually use.<br><br>
+      I'm a <strong>React Native Developer</strong> with <em>2+ years</em> of building apps that people actually use — including 2 years of freelance product delivery alongside full-time roles.<br><br>
       Specializing in <strong>React Native</strong> for Android &amp; iOS, plus full-stack with <strong>Node.js + MongoDB + Firebase + Supabase </strong>I've built it, tested it, deployed it, and maintained it.<br><br>
       Clean code. <strong>Real products. Live in production.</strong>
     </div>
     <div class="stats-col reveal delay-3">
       <div class="stat-card">
-        <div class="stat-n" data-target="1.5" data-suffix="+">0</div>
+        <div class="stat-n" data-target="2" data-suffix="+">0</div>
         <div class="stat-l">Years of experience</div>
       </div>
       <div class="stat-card">
-        <div class="stat-n" data-target="2" data-suffix="+">0</div>
+        <div class="stat-n" data-target="3" data-suffix="+">0</div>
         <div class="stat-l">Apps shipped live</div>
       </div>
       <div class="stat-card">
-        <div class="stat-n" data-target="2">0</div>
-        <div class="stat-l">Companies</div>
+        <div class="stat-n" data-target="3" data-suffix="+">0</div>
+        <div class="stat-l">Websites delivered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n" data-target="5">0</div>
+        <div class="stat-l">Companies / Clients</div>
       </div>
     </div>
   </div>
@@ -445,6 +455,20 @@ footer{padding:32px 40px;border-top:1px solid var(--border);display:flex;justify
 
   <div class="exp-timeline reveal delay-2">
 
+    <!-- Freelance -->
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div class="exp-card-left">
+          <div class="exp-company-name">Freelance</div>
+          <div class="exp-meta-row">
+            <span class="exp-badge badge-green">Ongoing</span>
+            <span class="exp-badge badge-blue">React Native &amp; Full-Stack Developer</span>
+            <span class="exp-period-text">2024 – Present · 2 Years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Techefficio -->
     <div class="exp-card">
       <div class="exp-card-header">
@@ -517,43 +541,87 @@ footer{padding:32px 40px;border-top:1px solid var(--border);display:flex;justify
 
 <section id="projects">
   <div class="s-label reveal">Portfolio</div>
-  <div class="s-title reveal delay-1">Projects</div>
+  <div class="s-title reveal delay-1">Apps</div>
   <div class="projects-grid">
     <div class="project-card featured reveal" style="--card-glow:rgba(184,255,79,0.08);--card-accent:var(--p1)">
       <div class="card-arrow">↗</div>
-      <!-- <span class="card-emoji">🛍️</span> -->
-      <div class="card-label">Mobile · Play Store · App Store</div>
+      <div class="card-label">Mobile · Live on Play Store &amp; App Store</div>
       <div class="card-title">HubbleMeet</div>
       <div class="card-desc">HubbleMeet is a next-generation professional networking app enabling one-to-one connections through QR-based
 digital business cards and 30–60 second pitch videos.</div>
       <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">Firebase</span><span class="card-tag">Redux</span><span class="card-tag">Node.js</span></div>
+      <div class="card-links">
+        <a href="https://play.google.com/store/apps/details?id=com.hubble.app" target="_blank" rel="noopener" class="card-link">▶ Play Store</a>
+        <a href="https://apps.apple.com/in/app/hubblemeet/id6752544354" target="_blank" rel="noopener" class="card-link">🍎 App Store</a>
+      </div>
+    </div>
+    <div class="project-card reveal delay-1" style="--card-glow:rgba(255,45,120,0.08);--card-accent:var(--p2)">
+      <div class="card-arrow">↗</div>
+      <div class="card-label">Health · Live on Play Store &amp; App Store</div>
+      <div class="card-title">Dandar Health</div>
+      <div class="card-desc">All-in-one health companion app to book doctor appointments, consult online via video, and order medicines.</div>
+      <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">Firebase</span><span class="card-tag">Video SDK</span><span class="card-tag">Auth</span></div>
+      <div class="card-links">
+        <a href="https://play.google.com/store/apps/details?id=com.dandarpatient&hl=en_IN" target="_blank" rel="noopener" class="card-link">▶ Play Store</a>
+        <a href="https://apps.apple.com/in/app/dandar-health-doc/id6745950306" target="_blank" rel="noopener" class="card-link">🍎 App Store</a>
+      </div>
     </div>
     <div class="project-card reveal delay-1" style="--card-glow:rgba(0,229,255,0.08);--card-accent:var(--p3)">
       <div class="card-arrow">↗</div>
-      <!-- <span class="card-emoji">💸</span> -->
-      <!-- <div class="card-label">Affiliate · Android &amp; iOS</div>
-      <div class="card-title">GrabCash</div>
-      <div class="card-desc">Affiliate earnings platform with real-time commission tracking and e-commerce deal sharing.</div>
-      <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">NestJS</span></div>
-    </div> -->
-    <div class="project-card reveal delay-1" style="--card-glow:rgba(255,45,120,0.08);--card-accent:var(--p2)">
-      <div class="card-arrow">↗</div>
-      <!-- <span class="card-emoji">📲</span> -->
-      <div class="card-label">Health</div>
-      <div class="card-title">Dandar Patient App</div>
-      <div class="card-desc">All-in-one health companion app to book doctor appointments, consult online, and order medicines.</div>
-      <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">Firebase</span></div><span class="card-tag">Auth</span></div>
-      <span class="card-tag">Video SDK</span></div>
+      <div class="card-label">Mobile · Live on Play Store &amp; App Store</div>
+      <div class="card-title">My Bash Buddy</div>
+      <div class="card-desc">A cross-platform companion app delivering a clean, polished user experience — built end-to-end and shipped to both Android &amp; iOS.</div>
+      <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">Firebase</span><span class="card-tag">Expo</span></div>
+      <div class="card-links">
+        <a href="https://play.google.com/store/apps/details?id=com.thebashbuddyuser" target="_blank" rel="noopener" class="card-link">▶ Play Store</a>
+        <a href="https://apps.apple.com/ae/app/my-bash-buddy/id6752379855" target="_blank" rel="noopener" class="card-link">🍎 App Store</a>
+      </div>
     </div>
     <div class="project-card reveal delay-2" style="--card-glow:rgba(255,184,0,0.08);--card-accent:var(--p4)">
       <div class="card-arrow">↗</div>
-      <span class="card-emoji">👓</span>
+      <span class="card-emoji">🚚</span>
       <div class="card-label">Transport</div>
       <div class="card-title">Donor Driver App</div>
-      <div class="card-desc">Logistics & Routing Platform.</div>
+      <div class="card-desc">Logistics &amp; routing platform with real-time navigation for drivers.</div>
       <div class="card-tags"><span class="card-tag">React Native</span><span class="card-tag">MapBox SDK</span><span class="card-tag">Expo</span></div>
     </div>
-  
+  </div>
+</section>
+
+<section id="websites">
+  <div class="s-label reveal">Web Presence</div>
+  <div class="s-title reveal delay-1">Websites</div>
+  <div class="projects-grid">
+    <div class="project-card reveal" style="--card-glow:rgba(0,229,255,0.08);--card-accent:var(--p3)">
+      <div class="card-arrow">↗</div>
+      <div class="card-label">Web · Logistics Platform</div>
+      <div class="card-title">Kalanabha</div>
+      <div class="card-desc">A logistics and business management web platform streamlining day-to-day operations end-to-end.</div>
+      <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Firebase</span></div>
+      <div class="card-links">
+        <a href="https://kalanabhamobile-262c3.web.app/" target="_blank" rel="noopener" class="card-link">↗ Visit Site</a>
+      </div>
+    </div>
+    <div class="project-card reveal delay-1" style="--card-glow:rgba(184,255,79,0.08);--card-accent:var(--p1)">
+      <div class="card-arrow">↗</div>
+      <div class="card-label">Web · Local Marketplace</div>
+      <div class="card-title">NearDeals</div>
+      <div class="card-desc">A local classifieds &amp; deals marketplace connecting nearby buyers and sellers.</div>
+      <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Netlify</span></div>
+      <div class="card-links">
+        <a href="https://sage-gumption-5da796.netlify.app/" target="_blank" rel="noopener" class="card-link">↗ Visit Site</a>
+      </div>
+    </div>
+    <div class="project-card reveal delay-2" style="--card-glow:rgba(255,45,120,0.08);--card-accent:var(--p2)">
+      <div class="card-arrow">↗</div>
+      <div class="card-label">Web · E-Commerce</div>
+      <div class="card-title">Divinescentss</div>
+      <div class="card-desc">An e-commerce storefront for handmade &amp; DIY products with a clean, conversion-focused shopping experience.</div>
+      <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Vercel</span></div>
+      <div class="card-links">
+        <a href="https://divinescentss.vercel.app/" target="_blank" rel="noopener" class="card-link">↗ Visit Site</a>
+      </div>
+    </div>
   </div>
 </section>
 
